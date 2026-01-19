@@ -119,12 +119,12 @@ nav a{
     color: #00FF88;
 }
 
-.about{
+.section-div{
     background-color: #1A0B2E;
     align-items: center;
     text-align: center;
 }
-.about h6{
+.text-h6{
     font-size: 3rem;
     font-weight: 700;
     line-height: 58px;
@@ -159,4 +159,50 @@ nav a{
 }
 .about-container p{
     text-transform: uppercase;
+}
+.Choose{
+    padding: 120px 200px;
+    background-color: rgba(35, 14, 61, 1);
+}
+.Choose-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 30px;  
+    margin-top: 40px;
+}
+.small-medium{
+    grid-row: span 2;
+    /* height: 480px; */
+    text-align: left;
+    align-content: center;  
+}
+.medium{
+    grid-column: span 2;
+    text-align: left;
+    /* height: 225px; */
+}
+.medium-2{
+    grid-column: span 2;
+    text-align: left;
+    /* height: 273px; */
+}
+.v-small{
+    text-align: left;
+    /* height: 273px; */
+}
+.Choose-content{
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+}
+.Choose-content h6{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.Choose-content img{
+    margin-bottom: 16px;
 }
