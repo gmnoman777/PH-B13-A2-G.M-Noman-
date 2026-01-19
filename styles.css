@@ -102,7 +102,7 @@ nav a{
     font-size: 1rem;
     font-weight: 400;
     line-height: 20px;
-    color: rgba(255, 255, 255, 0.788);
+    color: rgba(255, 255, 255, 0.705);
     margin-bottom: 24px;
 }
 .subs{
@@ -205,4 +205,72 @@ nav a{
 }
 .Choose-content img{
     margin-bottom: 16px;
+}
+.episodes{
+    background-color: #1A0B2E;
+    text-align: center;
+}
+.episodes{
+    padding: 120px 300px;
+}
+.episode-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 120px;
+}
+.episode-card{
+    background-color: rgba(37, 13, 68, 1);
+    border-radius:24px 24px 24px 24px;
+    text-align: left;
+    width:380px;
+    overflow: hidden;
+}
+.card-content{
+    padding: 24px;
+}
+.episodes h4{
+    font-style: Bold;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+.episode-card h6{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+span{
+    color:#00FF88;
+}
+
+.host h4{
+    margin-bottom: 40px;
+}
+.host-container{
+    background-color:  rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    gap: 24px;
+}
+.host-content{
+    text-align: left;
+}
+.host-content h6{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 39px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.host-link a{
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
 }
