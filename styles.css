@@ -3,6 +3,7 @@
     padding: o;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -15,8 +16,9 @@ nav{
     margin: 0 auto;
     height: 92px;
     align-items: center;
+    border-bottom: 1px solid #533C72;
 }
-nav .menu{
+ .menu{
     display: flex;
     list-style: none;
     gap: 32px;
@@ -38,13 +40,15 @@ nav a{
     font-weight: 500;
     line-height: 120%;
 }
+
+
 .btn{
     border-radius: 10000px;
     height: 44px;
     padding: 12px 16px;
     background: linear-gradient(45deg, #F7E93F,#FB09B4,#9100F8);
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 19px;
     text-align: left;
@@ -63,40 +67,47 @@ nav a{
     padding-top: 101px;
     padding-bottom: 101px;
     justify-items: center;
+
+    
+}
+.hero-container{
+    position: relative;
+    width: 400px;      
+    aspect-ratio: 1 / 1;
+    height: 400px;
 }
 .circle{
-    position: relative;
-    width: 415px;
+    position: absolute;
+    width:100%;
+    display: block;
 }
 .badge{
     
+    position: absolute;
+    top:5% ;
+    right: 10%;
+    background: #00ff88;
+    color: #000;
     font-size: 1.2rem;
     font-weight: 600;
-    line-height: 22px;
-    border: 1px solid;
-    border-radius: 1000px;
-    background-color: #00FF88;
-    width: 75px;
-    height: 38px;
     padding: 8px 16px;
-    position: relative;
-    transform: translate(400%,-1050%);
+    border-radius: 999px;
     box-shadow: 0 3px 10px #466b5a;
 }
 .microphone{
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
-    transform: translate(-50%, -180%);
-    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
 }
 .hero h1{
     font-size: 3.75rem;
     font-weight: 850;
     line-height: 73px;
     color: #FFFFFF;
-    /* margin-top: 20px; */
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 16px;
 }
 .paragraph{
     font-size: 1rem;
@@ -173,23 +184,19 @@ nav a{
 }
 .small-medium{
     grid-row: span 2;
-    /* height: 480px; */
     text-align: left;
     align-content: center;  
 }
 .medium{
     grid-column: span 2;
     text-align: left;
-    /* height: 225px; */
 }
 .medium-2{
     grid-column: span 2;
     text-align: left;
-    /* height: 273px; */
 }
 .v-small{
     text-align: left;
-    /* height: 273px; */
 }
 .Choose-content{
     background-color: rgba(53, 17, 101, 0.4);
@@ -206,11 +213,9 @@ nav a{
 .Choose-content img{
     margin-bottom: 16px;
 }
-.episodes{
+#episodes{
     background-color: #1A0B2E;
     text-align: center;
-}
-.episodes{
     padding: 120px 300px;
 }
 .episode-container{
@@ -230,7 +235,7 @@ nav a{
 .card-content{
     padding: 24px;
 }
-.episodes h4{
+#episodes h4{
     font-style: Bold;
     font-size: 4rem;
     font-weight: 700;
@@ -300,4 +305,223 @@ footer h1{
 }
 .copy{
     margin-top: 32px;
+}
+
+#menu-toggle{
+    display: none;
+}
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+}
+.phone-menu label{
+    color: #ffffff;
+}
+.phn-menu-content{
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background:rgba(0,0,0,0.3);
+  width: 150px;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  backdrop-filter: blur(8px);
+  border-radius: 20px 0 0 20px;
+}
+.phn-menu-content li {
+  list-style: none;
+}
+.phn-menu-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.phn-menu-content a:hover {
+  background: #312f31;
+}
+#menu-toggle:checked ~ .phn-menu-content {
+  transform: translateY(0);
+  max-height: 300px;
+  opacity: 1;
+}
+  #menu-toggle:checked + .hamburger {
+  display: none;
+}
+.close label {
+  display: block;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.hamburger{
+    display: block;
+  cursor: pointer;
+  position: relative;
+  left: 80%;
+  transform: translateY(-50% );
+
+}
+
+@media screen and (min-width: 576px) {
+    .phone-menu{
+        display: none;
+    }
+    .phn{
+        display: none;
+    }
+ 
+}
+@media screen and (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+    padding-top: 92px;
+  }
+  .full{
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  nav button{
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 25px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #1A0B2E;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero {
+    background-image: url(./images/Image.png);
+    height: auto;
+    padding: 60px 16px;
+  }
+  .hero-container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+   .microphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 70px;
+  }
+
+  .badge {
+    position: absolute;
+    top: 3%;
+    right: -6%;
+    width: 80px;
+    height: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  .text-h6{
+    font-size: 2.2rem;
+  }
+  
+  .about-container {
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 60px;
+  }
+  .about-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(2,1fr);
+    padding: 0 25px;
+  }
+  .Choose {
+    padding: 60px 16px; 
+  }
+
+  .Choose-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Choose-content {
+    padding: 24px;
+  }
+
+  #episodes {
+    padding: 60px 16px;  
+  }
+
+  .episode-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .episode-card {
+    width: 100%;      
+    max-width: 100%;
+  }
+
+  .episode-card iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .host-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .host-link{
+   text-align: center;
+   gap: 10px;
+  }
+
+  footer{
+    background-image: url(./images/footer.png);
+    height: auto;
+    background-position: center;
+    height: 350px;
+
+  }
+
+  .footer-container{
+    padding: 40px 20px;
+    justify-items: center;
+  }
+
+  footer h1 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+
+  .footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap:10px ;
+    gap: 16px;
+    width: 255px;
+  }
+  .copy{
+    width: 100%;
+  }
 }
